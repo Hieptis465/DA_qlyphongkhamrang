@@ -5,7 +5,7 @@
 #include <algorithm>
 using namespace std;
 
-const char* RED_TEXT ="\033[1;31m";      // m„ m‡u 
+const char* RED_TEXT ="\033[1;31m";      // m√£ m√†u 
 const char* ORANGE_TEXT ="\033[0;33m";   
 const char* YELLOW_TEXT ="\033[1;33m";   
 const char* GREEN_TEXT ="\033[1;32m";    
@@ -22,7 +22,7 @@ private:
     int id, phikham, phidieutri, phithuoc, tongtien;
     string sdt, tenbn, ngaysinh, quequan, ngaydieutri;
 public:
-    void input()                     // ham nhap thÙng tin benh nhan 
+    void input()                     // ham nhap th√¥ng tin benh nhan 
 	{                       
         cin.ignore();
         cout <<"\nNhap ma benh nhan: ";
@@ -64,11 +64,11 @@ public:
         cout<<RESET_TEXT; 
         fflush(stdin);
     }
-    void output()                        // ham xuat thÙng tin benh nhan 
+    void output()                        // ham xuat th√¥ng tin benh nhan 
 	{                       
         cout << setw(8) <<left<< id << setw(20) << tenbn << setw(13) << ngaysinh<< setw(15) << quequan << setw(12) << sdt << setw(12) << ngaydieutri << setw(11) << phikham << setw(11) << phidieutri << setw(11) << phithuoc << setw(11) << tongtien<<endl;
     }
-    int get_id() {                       //public cac thÙng tin benh nhan de use cho class qlyphongkham 
+    int get_id() {                       //public cac th√¥ng tin benh nhan de use cho class qlyphongkham 
         return id;
     }
     string get_tenbn() {
@@ -107,7 +107,7 @@ private:
     static int hesoluongcoban;
 public:
     string vitri;
-    void INPUT()                   // ham nhap thong tin nh‚n su 
+    void INPUT()                   // ham nhap thong tin nh√¢n su 
 	{                 
         cin.ignore();
         cout <<"\nNhap ma so nhan su: ";
@@ -138,7 +138,7 @@ public:
 		cout<<"\nNhap so ngay cong: ";
 		cin>>ngaycong;
 		fflush(stdin); 
-        if (vitri == "y ta") {                 // g·n gi· tri phu cap cho tung vi tri l‡m viec 
+        if (vitri == "y ta") {                 // g√°n gi√° tri phu cap cho tung vi tri l√†m viec 
             phucap = 1000000;
         } else if (vitri == "bac si") {
             phucap = 3000000;
@@ -291,13 +291,13 @@ void nhapds(quanlyphongkham a[], int n)
             for (int j = 0; j < i; j++) 
 			{
                 if (a[j].bn.get_id() == a[i].bn.get_id()) 
-				{            // khi id vua nhap bang id vua nhap truoc do thÏ nhap lai 
+				{            // khi id vua nhap bang id vua nhap truoc do th√¨ nhap lai 
                     cout <<RED_TEXT<<"\n***Ma benh nhan khong duoc trung nhau, Moi nhap lai!" << endl;
                     cout<<RESET_TEXT; 
                     res++;
                 }
             }
-        } while (res != 0);                                           // neu nhap tr˘ng id nhap lai  
+        } while (res != 0);                                           // neu nhap tr√πng id nhap lai  
     }
 }
 void xuatds(quanlyphongkham a[], int n) 
@@ -350,7 +350,7 @@ void timkiem(quanlyphongkham a[], int n)
 {                   // ham tim kiem thong tin benh nhan bang id 
     int x;                                                  //  khai bao ma benh nhan can tim  
     benhnhan bn;
-    int count = 0;                                        // bien dem kiem tra xem cÛ ma benh nhan can tim khong 
+    int count = 0;                                        // bien dem kiem tra xem c√≥ ma benh nhan can tim khong 
     cout <<YELLOW_TEXT<<"\nNhap ma benh nhan can tim: ";
     cin >> x;
     cout<< GREEN_TEXT<<"======================" <<endl; 
@@ -374,8 +374,8 @@ void timkiem(quanlyphongkham a[], int n)
 }
 void thembn(quanlyphongkham a[], int& n) 
 {                   // ham them thong tin benh nhan 
-    n++;                 // tang so luong benh nhan lÍn 1 
-    int res = 0;           // Khai b·o bien kiem tra cÛ bi tr˘ng id k 
+    n++;                 // tang so luong benh nhan l√™n 1 
+    int res = 0;           // Khai b√°o bien kiem tra c√≥ bi tr√πng id k 
     benhnhan bn;
     do 
 	{
@@ -411,7 +411,7 @@ void xoabn(quanlyphongkham a[], int& n)
 	    {
            res++;          // tang res danh dau da tim thay ma bn can xoa  
            for (int j = i; j < n - 1; j++) 
-		    {        // Vong lap dich chuyen cac ma benh nhan sau benh nhan can xoa lÍn vi tri truoc 
+		    {        // Vong lap dich chuyen cac ma benh nhan sau benh nhan can xoa l√™n vi tri truoc 
               a[j] = a[j + 1];
             }
         }
@@ -644,13 +644,13 @@ void nhaptb(quanlyphongkham a[], int nn)
             for (int j = 0; j < i; j++) 
 			{
                 if (a[j].tb.get_matb() == a[i].tb.get_matb()) 
-				{            // khi id vua nhap bang id vua nhap truoc do thÏ nhap lai 
+				{            // khi id vua nhap bang id vua nhap truoc do th√¨ nhap lai 
                     cout <<RED_TEXT<<"\n***Ma thiet bi khong duoc trung nhau, Moi nhap lai!" << endl;
                     cout<<RESET_TEXT; 
                     res++;
                 }
             }
-        } while (res != 0);                                           // neu nhap tr˘ng id nhap lai  
+        } while (res != 0);                                           // neu nhap tr√πng id nhap lai  
     }
 }
 void xuattb (quanlyphongkham a[], int nn) 
